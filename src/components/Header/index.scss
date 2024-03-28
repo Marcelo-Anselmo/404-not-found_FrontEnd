@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0rem 4rem 0rem 0rem;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 5rem;
+        }
+
+        li {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 180px;
+        margin: 0;
+    }
+}
