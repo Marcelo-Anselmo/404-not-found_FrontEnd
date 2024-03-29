@@ -1,0 +1,80 @@
+.BG {
+    position: fixed;
+    color: #ffffff;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 754px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #303030;
+    color: aliceblue;
+    padding: 4rem;
+    border-radius: 8px;
+
+    img {
+        width: 50%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            padding-left: 0.3rem;
+            border-radius: 10px;
+            border: 0;
+        }
+
+        textarea {
+            border-radius: 10px;
+        }
+    }
+}
+
+.Btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 20px;
+}
+
+.BtnConfirm {
+    background-color: transparent;
+    color: aliceblue;
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.534) !important;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: not-allowed;
+}
+
+.BtnClose {
+    background-color: black;
+    color: aliceblue;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 0;
+    // border: 0;
+    cursor: pointer;
+}
