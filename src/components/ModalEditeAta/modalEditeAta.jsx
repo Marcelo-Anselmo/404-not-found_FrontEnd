@@ -9,18 +9,13 @@ const ModalSchema = yup.object({
     nome: yup.string().required(),
     email: yup.string().required(),
     disciplina: yup.string().required(),
-    aula: yup.string().required(),
+    aula: yup.number().required(),
     turno: yup.string().required(),
     descricao: yup.string().notRequired(),
 });
 
 const ModalEditeAta = () => {
-    const {
-        editeAtaModal,
-        setEditeAtaModal,
-        openEditeAtaModal,
-        closeEditeAtaModal,
-    } = useContext(DashboardContext);
+    const { editeAtaModal, closeEditeAtaModal } = useContext(DashboardContext);
 
     const {
         register,

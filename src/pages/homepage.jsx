@@ -6,12 +6,21 @@ import AtaModal from "../components/Modal/Modal";
 import ReactModal from "react-modal";
 import ModalEditeAta from "../components/ModalEditeAta/modalEditeAta";
 import DeleteAtaModal from "../components/ModalDeleteAta/modalDeleteAta";
+import ModalCreateAluno from "../components/ModalCreateAluno/modalCreateAluno";
+import ModalEditeAluno from "../components/ModalEditeAluno/modalEditeAluno";
+import DeleteAlunoModal from "../components/ModalDeleteAluno/modalDeleteAluno";
 
 ReactModal.setAppElement("#root");
 
 export const DashboardPage = () => {
-    const { openAtaModal, openEditeAtaModal, openDeleteAtaModal } =
-        useContext(DashboardContext);
+    const {
+        openAtaModal,
+        openEditeAtaModal,
+        openDeleteAtaModal,
+        openCreateAlunoModal,
+        openEditeAlunoModal,
+        openDeleteAlunoModal,
+    } = useContext(DashboardContext);
 
     return (
         <div>
@@ -29,10 +38,25 @@ export const DashboardPage = () => {
                         Excluir Ata
                     </button>
                 </div>
+
+                <div>
+                    <button onClick={() => openCreateAlunoModal()}>
+                        Adicionar Aluno
+                    </button>
+                    <button onClick={() => openEditeAlunoModal()}>
+                        Editar Aluno
+                    </button>
+                    <button onClick={() => openDeleteAlunoModal()}>
+                        Excluir Aluno
+                    </button>
+                </div>
             </section>
             <AtaModal />
             <ModalEditeAta />
             <DeleteAtaModal />
+            <ModalCreateAluno />
+            <ModalEditeAluno />
+            <DeleteAlunoModal />
             <Members />
         </div>
     );

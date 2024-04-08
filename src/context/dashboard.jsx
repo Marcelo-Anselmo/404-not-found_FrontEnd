@@ -6,6 +6,9 @@ export const DashboardProvider = ({ children }) => {
     const [ataModal, setAtaModal] = useState(false);
     const [editeAtaModal, setEditeAtaModal] = useState(false);
     const [deleteAtaModal, setDeleteAtaModal] = useState(false);
+    const [createAlunoModal, setCreateAlunoModal] = useState(false);
+    const [editeAlunoModal, setEditeAlunoModal] = useState(false);
+    const [deleteAlunoModal, setDeleteAlunoModal] = useState(false);
 
     const openAtaModal = () => {
         setAtaModal(true);
@@ -28,6 +31,27 @@ export const DashboardProvider = ({ children }) => {
         setDeleteAtaModal(false);
     };
 
+    const openCreateAlunoModal = () => {
+        setCreateAlunoModal(true);
+    };
+    const closeCreateAlunoModal = () => {
+        setCreateAlunoModal(false);
+    };
+
+    const openEditeAlunoModal = () => {
+        setEditeAlunoModal(true);
+    };
+    const closeEditeAlunoModal = () => {
+        setEditeAlunoModal(false);
+    };
+
+    const openDeleteAlunoModal = () => {
+        setDeleteAlunoModal(true);
+    };
+    const closeDeleteAlunoModal = () => {
+        setDeleteAlunoModal(false);
+    };
+
     return (
         <DashboardContext.Provider
             value={{
@@ -43,6 +67,18 @@ export const DashboardProvider = ({ children }) => {
                 setDeleteAtaModal,
                 openDeleteAtaModal,
                 closeDeleteAtaModal,
+                createAlunoModal,
+                setCreateAlunoModal,
+                openCreateAlunoModal,
+                closeCreateAlunoModal,
+                editeAlunoModal,
+                setEditeAlunoModal,
+                openEditeAlunoModal,
+                closeEditeAlunoModal,
+                deleteAlunoModal,
+                setDeleteAlunoModal,
+                openDeleteAlunoModal,
+                closeDeleteAlunoModal,
             }}
         >
             {children}
