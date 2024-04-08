@@ -4,11 +4,13 @@ import Members from "../components/Members/Members";
 import { DashboardContext } from "../context/dashboard";
 import AtaModal from "../components/Modal/Modal";
 import ReactModal from "react-modal";
+import ModalEditeAta from "../components/ModalEditeAta/modalEditeAta";
+import DeleteAtaModal from "../components/ModalDeleteAta/modalDeleteAta";
 
 ReactModal.setAppElement("#root");
 
 export const DashboardPage = () => {
-    const { ataModal, setAtaModal, openAtaModal, closeAtaModal } =
+    const { openAtaModal, openEditeAtaModal, openDeleteAtaModal } =
         useContext(DashboardContext);
 
     return (
@@ -20,9 +22,17 @@ export const DashboardPage = () => {
                     <button className="criaAta" onClick={() => openAtaModal()}>
                         Criar Ata
                     </button>
+                    <button onClick={() => openEditeAtaModal()}>
+                        Editar Ata
+                    </button>
+                    <button onClick={() => openDeleteAtaModal()}>
+                        Excluir Ata
+                    </button>
                 </div>
             </section>
             <AtaModal />
+            <ModalEditeAta />
+            <DeleteAtaModal />
             <Members />
         </div>
     );
