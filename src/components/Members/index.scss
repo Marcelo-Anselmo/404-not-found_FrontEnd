@@ -1,15 +1,29 @@
+@use "../../sass/variables" as *;
+
 .memberSection {
-    padding-left: 3rem;
+    background-color: #303030;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    margin-top: 11rem;
+    
     h2 {
         font-size: 2rem;
         padding: 1rem;
-        background-color: #303030;
         width: 20%;
         border-radius: 10px;
     }
 
     ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
         list-style: none;
         padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .memberSection {
+        margin-top: 7rem;
     }
 }

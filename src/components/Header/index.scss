@@ -20,13 +20,36 @@ header {
         }
 
         li {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
+        }
+
+        li:hover {
+            color: #157F18;
+            transition: 0.5s;
+            border-bottom: 2px solid #157F18;
         }
     }
 
     img {
         width: 180px;
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    header {
+
+        img {
+            width: 170px;
+        }
+        
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
     }
 }
