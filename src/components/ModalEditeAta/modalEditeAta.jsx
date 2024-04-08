@@ -1,6 +1,5 @@
-import styles from "../Modal/Modal.module.scss";
-import { useForm } from "react-hook-form";
 import ReactModal from "react-modal";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext } from "react";
@@ -15,9 +14,13 @@ const ModalSchema = yup.object({
     descricao: yup.string().notRequired(),
 });
 
-const AtaModal = () => {
-    const { ataModal, setAtaModal, openAtaModal, closeAtaModal } =
-        useContext(DashboardContext);
+const ModalEditeAta = () => {
+    const {
+        editeAtaModal,
+        setEditeAtaModal,
+        openEditeAtaModal,
+        closeEditeAtaModal,
+    } = useContext(DashboardContext);
 
     const {
         register,
@@ -25,23 +28,23 @@ const AtaModal = () => {
         formState: { errors },
     } = useForm({ resolver: yupResolver(ModalSchema) });
 
-    const onSubmitAtaModal = (data) => {
+    const onSubmitEditeAtaModal = (data) => {
         console.log(data);
     };
 
     return (
         <>
             <ReactModal
-                isOpen={ataModal}
-                onRequestClose={() => closeAtaModal()}
+                isOpen={editeAtaModal}
+                onRequestClose={() => closeEditeAtaModal()}
                 className="modal"
                 overlayClassName="exterior-modal"
             >
                 <div>
-                    <h1>Ata Online</h1>
-                    <button onClick={() => closeAtaModal()}>XX</button>
+                    <h1>Editar Ata</h1>
+                    <button onClick={() => closeEditeAtaModal()}>XX</button>
                 </div>
-                <form onSubmit={handleSubmit(onSubmitAtaModal)}>
+                <form onSubmit={handleSubmit(onSubmitEditeAtaModal)}>
                     <label>Professor</label>
                     <input
                         type="text"
@@ -90,11 +93,11 @@ const AtaModal = () => {
                     />
                     <p>{errors.descricao?.message}</p>
 
-                    <button type="submit">Criar Ata</button>
+                    <button type="submit">Editar Ata</button>
                 </form>
             </ReactModal>
         </>
     );
 };
 
-export default AtaModal;
+export default ModalEditeAta;
