@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    width: 80%;
+
+    border-radius: 15px;
+
+    background-color: #f0f0f0;
+    color: #212121;
+
+    padding-bottom: 15px;
+}
+.containerTitle {
+    margin: 10px 0px 10px 0px;
+
+    color: #157f18;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 75px;
+}
+.containerBtns {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+
+    margin-top: 11px;
+
+    color: #212121;
+}
+.editeBtn:hover {
+    transition: 0.3s;
+    color: #157f18;
+}
+.deleteBtn:hover {
+    transition: 0.3s;
+    color: #157f18;
+}
+
+.containerInfo {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding-bottom: 10px;
+
+    margin-left: -80px;
+}
+
+.texto {
+    font-weight: 450;
+    word-wrap: break-word;
+
+    margin-left: 80px;
+}
+
+@media (min-width: 1020px) {
+    .containerInfo {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
