@@ -1,34 +1,44 @@
+import { useContext } from "react";
 import "./infoAta.modules.css";
-import { FaPen, FaTrashAlt } from "react-icons/fa";
+import { FaPen, FaTrashAlt, FaAddressCard } from "react-icons/fa";
+import { DashboardContext } from "../../context/dashboard";
 
 const InfoAta = () => {
+    const {
+        ataOnline,
+        openCreateAlunoModal,
+        openEditeAtaModal,
+        openDeleteAtaModal,
+    } = useContext(DashboardContext);
+
     return (
         <>
             <div className="container">
                 <div className="containerTitle">
                     <h2>Ata online</h2>
                     <div className="containerBtns">
+                        <FaAddressCard
+                            className="createBtn"
+                            onClick={() => openCreateAlunoModal()}
+                        />
                         <FaPen
                             className="editeBtn"
-                            // onClick={() => openEditeAtaModal()}
+                            onClick={() => openEditeAtaModal()}
                         />
                         <FaTrashAlt
                             className="deleteBtn"
-                            // onClick={() => openDeleteAtaModal()}
+                            onClick={() => openDeleteAtaModal()}
                         />
                     </div>
                 </div>
 
                 <div className="containerInfo">
-                    <p className="texto">Professor: Sidney</p>
-                    <p className="texto">Disciplina: Modelagem de Software</p>
-                    <p className="texto">Data: 13/07/2024 12:10:50</p>
-                    <p className="texto">Turno: Noite</p>
-                    <p className="texto">Aula: 1</p>
-                    <p className="texto">
-                        Descrição:
-                        sadasdsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsads
-                    </p>
+                    <p className="texto">Professor: {ataOnline.nome}</p>
+                    <p className="texto">Disciplina: {ataOnline.disciplina}</p>
+                    <p className="texto">Data: {ataOnline.created_at}</p>
+                    <p className="texto">Turno: {ataOnline.turno}</p>
+                    <p className="texto">Aula: {ataOnline.aula}</p>
+                    <p className="texto">Descrição: {ataOnline.descricao}</p>
                 </div>
             </div>
         </>

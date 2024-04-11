@@ -34,6 +34,10 @@
 
     color: #212121;
 }
+.createBtn:hover {
+    transition: 0.3s;
+    color: #157f18;
+}
 .editeBtn:hover {
     transition: 0.3s;
     color: #157f18;
