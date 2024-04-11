@@ -12,7 +12,7 @@ const ModalSchema = yup.object({
 });
 
 const ModalEditeAluno = () => {
-    const { editeAlunoModal, closeEditeAlunoModal } =
+    const { editeAlunoModal, closeEditeAlunoModal, editeAluno, ataOnline } =
         useContext(DashboardContext);
 
     const {
@@ -23,6 +23,7 @@ const ModalEditeAluno = () => {
 
     const onSubmitEditeAlunoModal = (data) => {
         console.log(data);
+        editeAluno(data, ataOnline.id);
     };
 
     return (

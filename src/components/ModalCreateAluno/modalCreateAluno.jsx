@@ -12,7 +12,7 @@ const ModalSchema = yup.object({
 });
 
 const ModalCreateAluno = () => {
-    const { createAlunoModal, closeCreateAlunoModal } =
+    const { createAlunoModal, closeCreateAlunoModal, createAluno, ataOnline } =
         useContext(DashboardContext);
 
     const {
@@ -22,7 +22,7 @@ const ModalCreateAluno = () => {
     } = useForm({ resolver: yupResolver(ModalSchema) });
 
     const onSubmitCreateAlunoModal = (data) => {
-        console.log(data);
+        createAluno(data, ataOnline.id);
     };
 
     return (

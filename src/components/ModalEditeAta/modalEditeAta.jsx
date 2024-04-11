@@ -6,16 +6,17 @@ import { useContext } from "react";
 import { DashboardContext } from "../../context/dashboard";
 
 const ModalSchema = yup.object({
-    nome: yup.string().required(),
-    email: yup.string().required(),
-    disciplina: yup.string().required(),
-    aula: yup.number().required(),
-    turno: yup.string().required(),
+    nome: yup.string().notRequired(),
+    email: yup.string().notRequired(),
+    disciplina: yup.string().notRequired(),
+    aula: yup.number().notRequired(),
+    turno: yup.string().notRequired(),
     descricao: yup.string().notRequired(),
 });
 
 const ModalEditeAta = () => {
-    const { editeAtaModal, closeEditeAtaModal } = useContext(DashboardContext);
+    const { editeAtaModal, closeEditeAtaModal, editeAta, ataOnline } =
+        useContext(DashboardContext);
 
     const {
         register,
@@ -24,7 +25,7 @@ const ModalEditeAta = () => {
     } = useForm({ resolver: yupResolver(ModalSchema) });
 
     const onSubmitEditeAtaModal = (data) => {
-        console.log(data);
+        editeAta(data, ataOnline.id);
     };
 
     return (
@@ -43,7 +44,7 @@ const ModalEditeAta = () => {
                     <label>Professor</label>
                     <input
                         type="text"
-                        placeholder="Roger S. Pressman"
+                        defaultValue={ataOnline.nome}
                         {...register("nome")}
                     />
                     <p>{errors.nome?.message}</p>
@@ -51,7 +52,7 @@ const ModalEditeAta = () => {
                     <label>Email</label>
                     <input
                         type="text"
-                        placeholder="exemplo@email.com"
+                        defaultValue={ataOnline.email}
                         {...register("email")}
                     />
                     <p>{errors.email?.message}</p>
@@ -59,7 +60,7 @@ const ModalEditeAta = () => {
                     <label>Disciplina</label>
                     <input
                         type="text"
-                        placeholder="Modelagem de software"
+                        defaultValue={ataOnline.disciplina}
                         {...register("disciplina")}
                     />
                     <p>{errors.disciplina?.message}</p>
@@ -67,7 +68,7 @@ const ModalEditeAta = () => {
                     <label>Turno</label>
                     <input
                         type="text"
-                        placeholder="Ex: noite"
+                        defaultValue={ataOnline.turno}
                         {...register("turno")}
                     />
                     <p>{errors.turno?.message}</p>
@@ -75,7 +76,7 @@ const ModalEditeAta = () => {
                     <label>Aula</label>
                     <input
                         type="number"
-                        placeholder="Aula: ex = 1"
+                        defaultValue={ataOnline.aula}
                         {...register("aula")}
                     />
                     <p>{errors.aula?.message}</p>
@@ -83,7 +84,7 @@ const ModalEditeAta = () => {
                     <label>Descrição</label>
                     <input
                         type="text"
-                        placeholder="Descrição da aula"
+                        defaultValue={ataOnline.descricao}
                         {...register("descricao")}
                     />
                     <p>{errors.descricao?.message}</p>

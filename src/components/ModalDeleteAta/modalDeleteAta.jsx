@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DashboardContext } from "../../context/dashboard";
 
 const DeleteAtaModal = () => {
-    const { deleteAtaModal, closeDeleteAtaModal } =
+    const { deleteAtaModal, closeDeleteAtaModal, deleteAta, ataOnline } =
         useContext(DashboardContext);
 
     return (
@@ -16,9 +16,7 @@ const DeleteAtaModal = () => {
             <div>
                 <h2>Deseja excluir está Ata?</h2>
                 <div>
-                    <button
-                        onClick={() => console.log("Requisição de deleteAta")}
-                    >
+                    <button onClick={() => deleteAta(ataOnline.id)}>
                         Confirmar
                     </button>
                     <button onClick={() => closeDeleteAtaModal()}>
