@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./index.scss";
 
 const Header = () => {
@@ -9,10 +8,12 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to={""}></Link>About
+              <a href="#aboutSection">Sobre</a>
+              {/* <Link to={"aboutSection"}>Sobre</Link> */}
             </li>
             <li>
-              <Link to={""}></Link>Members
+              <a href="#memberSection">Equipe</a>
+              {/* <Link to={"#membrosSection"}>Equipe</Link> */}
             </li>
           </ul>
         </nav>
