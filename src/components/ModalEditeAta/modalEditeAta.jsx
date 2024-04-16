@@ -1,3 +1,4 @@
+import "./index.scss";
 import ReactModal from "react-modal";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -33,12 +34,14 @@ const ModalEditeAta = () => {
             <ReactModal
                 isOpen={editeAtaModal}
                 onRequestClose={() => closeEditeAtaModal()}
-                className="modal"
+                className="Modal"
                 overlayClassName="exterior-modal"
             >
-                <div>
+                <div className="btnClose">
                     <h1>Editar Ata</h1>
-                    <button onClick={() => closeEditeAtaModal()}>XX</button>
+                    <div>
+                        <button onClick={() => closeEditeAtaModal()}>X</button>
+                    </div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitEditeAtaModal)}>
                     <label>Professor</label>
