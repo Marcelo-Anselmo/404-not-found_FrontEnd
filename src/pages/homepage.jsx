@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Header from "../components/Header/Header";
-import Members from "../components/Members/Members";
+import Members from "../components/Footer/Footer";
 import { DashboardContext } from "../context/dashboard";
 import "../App.css";
 import AtaModal from "../components/Modal/Modal";
