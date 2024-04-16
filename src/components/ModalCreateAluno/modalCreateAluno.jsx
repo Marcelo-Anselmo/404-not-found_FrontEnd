@@ -1,3 +1,4 @@
+import "./index.scss";
 import ReactModal from "react-modal";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -30,12 +31,12 @@ const ModalCreateAluno = () => {
             <ReactModal
                 isOpen={createAlunoModal}
                 onRequestClose={() => closeCreateAlunoModal()}
-                className="modal"
+                className="Modal"
                 overlayClassName="exterior-modal"
             >
-                <div>
+                <div className="btnClose">
                     <h1>Adiconar Aluno</h1>
-                    <button onClick={() => closeCreateAlunoModal()}>XX</button>
+                    <button onClick={() => closeCreateAlunoModal()}>X</button>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitCreateAlunoModal)}>
                     <label>Nome</label>

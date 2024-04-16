@@ -1,0 +1,99 @@
+.Modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 754px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F0F0F0;
+    color: black;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            padding-left: 0.3rem;
+            border-radius: 10px;
+            border: 0;
+        }
+
+        textarea {
+            border-radius: 10px;
+            padding-left: 1rem;
+            padding-top: 0.3rem;
+        }
+    }
+
+    .btnClose {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // width: 100%;
+        margin-bottom: 2rem; 
+
+        button {
+            width: 100px;
+        }
+    }
+
+    .btnClose:hover {
+        button {
+            background-color: red;
+            transition: 0.5s;
+        }
+    }
+
+    button {
+        background-color: #212121;
+        color: aliceblue;
+        width: 150px;
+        height: 40px;
+        margin-left: 4rem;
+        border: 1px solid rgba(0, 0, 0, 0.534) !important;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #157F18;
+        transition: 0.5s;
+    }
+
+    .confirmBtn {
+        margin: 1rem auto;
+    }
+
+    .closeBtn {
+        margin-left: 90%;
+
+        button {
+            width: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .Modal {
+        .closeBtn {
+            margin-left: 50%;
+        }
+    }
+}

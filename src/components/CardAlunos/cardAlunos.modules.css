@@ -27,6 +27,8 @@
 
     padding: 5px 0px 4px 10px;
 
+    margin-left: 1.6rem;
+
     font-weight: 400;
 }
 
@@ -40,6 +42,11 @@
 
     cursor: pointer;
 }
+
+.containerBtns {
+    cursor: pointer;
+}
+
 .editeBtn:hover {
     transition: 0.3s;
     color: #157f18;
