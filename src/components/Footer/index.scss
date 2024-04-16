@@ -1,0 +1,52 @@
+@use "../../sass/variables" as *;
+
+.Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 5rem 0rem 5rem; /* TAMANHO DO PADDING FOOTER */
+    background-color: #303030;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    margin-top: 15rem;
+}
+
+.memberSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    ul {
+        display: flex;
+        padding-top: 0.5rem;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    li {
+        list-style: none;
+        font-size: 1rem;
+        font-weight: 400;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .memberSection {
+        padding-left: 3rem;
+        padding-top: 2rem;
+        ul {
+            display: flex;
+        }
+    }
+}
