@@ -11,14 +11,14 @@
     border-radius: 15px;
 
     background-color: #f0f0f0;
-    color: #212121;
+    color: rgb(99, 100, 102);
 
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
 }
 .containerTitle {
     margin: 10px 0px 10px 0px;
 
-    color: #157f18;
+    color: #E87722;
 
     display: flex;
     justify-content: space-around;
@@ -36,15 +36,15 @@
 }
 .createBtn:hover {
     transition: 0.3s;
-    color: #157f18;
+    color: #00428B;
 }
 .editeBtn:hover {
     transition: 0.3s;
-    color: #157f18;
+    color: #00428B !important;
 }
 .deleteBtn:hover {
     transition: 0.3s;
-    color: #157f18;
+    color: #00428B !important;
 }
 
 .containerInfo {

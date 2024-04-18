@@ -15,7 +15,7 @@ const InfoAta = () => {
         <>
             <div className="container">
                 <div className="containerTitle">
-                    <h2>Ata online</h2>
+                    <h2>Lista de presença online</h2>
                     <div className="containerBtns">
                         <FaAddressCard
                             className="createBtn"
