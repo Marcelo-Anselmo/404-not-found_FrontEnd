@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <header>
-        <img src="./404_logo_alpha.png" alt="logo da 404" />
+        <img src="./unifg_logo.png" alt="logo da Unifg" />
         <nav>
           <ul>
             <li>
