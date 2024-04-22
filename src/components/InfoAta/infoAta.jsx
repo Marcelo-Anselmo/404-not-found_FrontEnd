@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./infoAta.modules.css";
 import { FaPen, FaTrashAlt, FaAddressCard } from "react-icons/fa";
 import { DashboardContext } from "../../context/dashboard";
+import ButtonSendEmail from "../ButtonSendEmail/buttonSendEmail";
 
 const InfoAta = () => {
     const {
@@ -41,6 +42,7 @@ const InfoAta = () => {
                     <p className="texto">Descrição: {ataOnline.descricao}</p>
                 </div>
             </div>
+            <ButtonSendEmail />
         </>
     );
 };

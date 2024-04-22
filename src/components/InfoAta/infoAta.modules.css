@@ -19,7 +19,7 @@
     margin: 10px 0px 10px 0px;
     margin-left: 2.3rem;
 
-    color: #E87722;
+    color: #e87722;
 
     display: flex;
     justify-content: space-around;
@@ -37,15 +37,15 @@
 }
 .createBtn:hover {
     transition: 0.3s;
-    color: #00428B;
+    color: #00428b;
 }
 .editeBtn:hover {
     transition: 0.3s;
-    color: #00428B !important;
+    color: #00428b !important;
 }
 .deleteBtn:hover {
     transition: 0.3s;
-    color: #00428B !important;
+    color: #00428b !important;
 }
 
 .containerInfo {
@@ -75,24 +75,23 @@
 }
 
 @media only screen and (max-width: 500px) {
-
-    .container{
+    .container {
         width: 89%;
     }
 
     .containerBtns {
-            width: 100%;
-        }
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 360px) {
     .container {
-            width: 93%;
-        }
-    
-        .containerBtns {
-            width: 100%;
-        }
+        width: 93%;
+    }
+
+    .containerBtns {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 320px) {
