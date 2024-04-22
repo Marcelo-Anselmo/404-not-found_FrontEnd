@@ -14,10 +14,10 @@ const DeleteAtaModal = () => {
         className="Modal"
         overlayClassName="exterior-modal">
         <div className="Btns">
-          <h2>Deseja excluir está Ata?</h2>
+          <h1>Deseja excluir está Ata?</h1>
           <div>
-            <button onClick={() => deleteAta(ataOnline.id)}>Confirmar</button>
-            <button onClick={() => closeDeleteAtaModal()}>Cancelar</button>
+            <button className="confirmBtn" onClick={() => deleteAta(ataOnline.id)}>Confirmar</button>
+            <button className="cancelBtn" onClick={() => closeDeleteAtaModal()}>Cancelar</button>
           </div>
         </div>
       </ReactModal>
