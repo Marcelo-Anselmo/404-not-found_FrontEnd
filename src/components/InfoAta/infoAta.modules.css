@@ -17,6 +17,7 @@
 }
 .containerTitle {
     margin: 10px 0px 10px 0px;
+    margin-left: 2.3rem;
 
     color: #E87722;
 
@@ -70,5 +71,36 @@
     .containerInfo {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container{
+        width: 89%;
+    }
+
+    .containerBtns {
+            width: 100%;
+        }
+}
+
+@media only screen and (max-width: 360px) {
+    .container {
+            width: 93%;
+        }
+    
+        .containerBtns {
+            width: 100%;
+        }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 98%;
+    }
+
+    .containerBtns {
+        width: 100%;
     }
 }
