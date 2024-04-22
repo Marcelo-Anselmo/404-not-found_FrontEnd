@@ -69,10 +69,10 @@ body {
   gap: 5px;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 500px){
   .mainContent {
     h1{
-      margin-top: 10rem;
+      /* margin-top: 10rem; */
     }
   }
 }
