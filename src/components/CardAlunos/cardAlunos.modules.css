@@ -5,6 +5,7 @@
 }
 .title {
     text-align: center;
+    visibility: hidden;
 }
 .lista {
     display: flex;
