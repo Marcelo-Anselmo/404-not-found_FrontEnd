@@ -51,7 +51,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 
     header {
 
@@ -64,6 +64,42 @@ header {
 
             ul {
                 gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    header {
+
+        img {
+            width: 190px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    header {
+
+        img {
+            width: 165px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 1.3rem;
             }
         }
     }
