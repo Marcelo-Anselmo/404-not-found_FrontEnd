@@ -41,7 +41,7 @@ const AtaModal = () => {
                     <button onClick={() => closeAtaModal()}>X</button>
                 </div>
                 <div>
-                    <h1>Ata Online</h1>
+                    <h1>Lista de presença online</h1>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitAtaModal)}>
                     <label>Professor</label>
@@ -93,7 +93,7 @@ const AtaModal = () => {
                     <p>{errors.descricao?.message}</p>
 
                     <div className="confirmBtn">
-                        <button type="submit">Criar Ata</button>
+                        <button type="submit">Criar</button>
                     </div>
                 </form>
             </ReactModal>

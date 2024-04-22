@@ -1,3 +1,4 @@
+import "./index.scss";
 import ReactModal from "react-modal";
 import { useContext } from "react";
 import { DashboardContext } from "../../context/dashboard";
@@ -10,16 +11,16 @@ const DeleteAlunoModal = () => {
         <ReactModal
             isOpen={deleteAlunoModal}
             onRequestClose={() => closeDeleteAlunoModal()}
-            className="modal"
+            className="Modal"
             overlayClassName="exterior-modal"
         >
-            <div>
-                <h2>Excluir Aluno?</h2>
+            <div className="Btns">
+                <h1>Excluir Aluno?</h1>
                 <div>
-                    <button onClick={() => deleteAluno(ataOnline.id)}>
+                    <button className="confirmBtn" onClick={() => deleteAluno(ataOnline.id)}>
                         Confirmar
                     </button>
-                    <button onClick={() => closeDeleteAlunoModal()}>
+                    <button className="cancelBtn" onClick={() => closeDeleteAlunoModal()}>
                         Cancelar
                     </button>
                 </div>

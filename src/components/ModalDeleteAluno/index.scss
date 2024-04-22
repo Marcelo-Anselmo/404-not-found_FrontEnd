@@ -41,7 +41,7 @@
     }
 
     button:hover {
-        background-color: #157F18;
+        background-color: $unifg-azul;
         transition: 0.5s;
     }
 
@@ -59,7 +59,7 @@
 
     .cancelBtn {
         background-color: $unifg-laranja;
-        border: 0;
+        border: 0px;
     }
 }
 

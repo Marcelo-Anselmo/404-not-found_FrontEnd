@@ -1,3 +1,5 @@
+@use "../../sass/variables" as *;
+
 .Modal {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #F0F0F0;
+    background-color: $unifg-branco;
     color: black;
     padding: 4rem;
     border-radius: 10px;
@@ -39,25 +41,6 @@
         }
     }
 
-    .btnClose {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // width: 100%;
-        margin-bottom: 2rem; 
-
-        button {
-            width: 100px;
-        }
-    }
-
-    .btnClose:hover {
-        button {
-            background-color: red;
-            transition: 0.5s;
-        }
-    }
-
     button {
         background-color: #212121;
         color: aliceblue;
@@ -72,7 +55,7 @@
     }
 
     button:hover {
-        background-color: #157F18;
+        background-color: $unifg-azul;
         transition: 0.5s;
     }
 

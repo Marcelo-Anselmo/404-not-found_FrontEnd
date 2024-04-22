@@ -35,11 +35,11 @@ const ModalEditeAluno = () => {
                 className="Modal"
                 overlayClassName="exterior-modal"
             >
-                <div className="btnClose">
+                <div className="closeBtn">
+                    <button onClick={() => closeEditeAlunoModal()}>X</button>
+                </div>
+                <div>
                     <h1>Editar Aluno</h1>
-                    <div>
-                        <button onClick={() => closeEditeAlunoModal()}>X</button>
-                    </div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitEditeAlunoModal)}>
                     <label>Nome</label>
@@ -60,13 +60,14 @@ const ModalEditeAluno = () => {
 
                     <label>RA</label>
                     <input
-                        type="number"
+                        maxLength="10"
+                        type="text"
                         placeholder="0123456789"
                         {...register("RA")}
                     />
                     <p>{errors.RA?.message}</p>
 
-                    <button type="submit">Editar Aluno</button>
+                    <button className="confirmBtn" type="submit">Editar Aluno</button>
                 </form>
             </ReactModal>
         </>

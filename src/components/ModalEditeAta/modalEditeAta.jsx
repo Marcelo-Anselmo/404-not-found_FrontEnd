@@ -37,11 +37,11 @@ const ModalEditeAta = () => {
                 className="Modal"
                 overlayClassName="exterior-modal"
             >
-                <div className="btnClose">
+                <div className="closeBtn">
+                    <button onClick={() => closeEditeAtaModal()}>X</button>
+                </div>
+                <div>
                     <h1>Editar Ata</h1>
-                    <div>
-                        <button onClick={() => closeEditeAtaModal()}>X</button>
-                    </div>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitEditeAtaModal)}>
                     <label>Professor</label>
@@ -92,7 +92,7 @@ const ModalEditeAta = () => {
                     />
                     <p>{errors.descricao?.message}</p>
 
-                    <button type="submit">Editar Ata</button>
+                    <button className="confirmBtn" type="submit">Editar Ata</button>
                 </form>
             </ReactModal>
         </>

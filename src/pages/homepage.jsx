@@ -37,7 +37,7 @@ export const DashboardPage = () => {
                             className="criaAta"
                             onClick={() => openAtaModal()}
                         >
-                            Criar Ata
+                            Criar lista de presença
                         </button>
                     </div>
                 ) : (

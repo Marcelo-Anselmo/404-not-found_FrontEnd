@@ -1,3 +1,5 @@
+@use "../../sass/variables" as *;
+
 * {
     padding: 0px;
     margin: 0px;
@@ -5,13 +7,13 @@
 }
 
 a {
-    color: aliceblue;
+    color: $unifg-cinza;
     text-decoration: none;
     font-size: 1.3rem;
 }
 
 a:hover {
-    color: #157F18;
+    color: $unifg-laranja;
     transition: 0.3s;
 }
 
@@ -36,15 +38,16 @@ header {
         }
 
         li:hover {
-            color: #157F18;
+            color: $unifg-cinza;
             transition: 0.5s;
-            border-bottom: 2px solid #157F18;
+            border-bottom: 2px solid $unifg-laranja;
         }
     }
 
     img {
-        width: 180px;
+        width: 300px;
         margin: 0;
+        padding: 5rem;
     }
 }
 
@@ -53,13 +56,50 @@ header {
     header {
 
         img {
-            width: 170px;
+            width: 230px;
+            padding: 3rem;
         }
         
         nav {
 
             ul {
                 gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    header {
+
+        img {
+            width: 190px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    header {
+
+        img {
+            width: 165px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 1.3rem;
             }
         }
     }

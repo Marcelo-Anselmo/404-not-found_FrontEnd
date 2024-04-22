@@ -1,18 +1,28 @@
+@use "../../sass/variables" as *;
+
 .Modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: 754px;
+    width: 550px; /* 550px Possivel nova Medida | 754px Medida Antiga */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #F0F0F0;
+    background-color: $unifg-branco;
     color: black;
-    padding: 4rem;
-    border-radius: 10px;
+    padding: 3.3rem; /* 3.3rem Possivel nova Medida | 4rem Medida Antiga */
+    border: 0;
+    border-radius: 15px;
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+
+    h1{
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 3rem;
+        color: $unifg-laranja;
+    }
 
     img {
         width: 50%;
@@ -26,14 +36,21 @@
             font-size: 1rem;
             font-weight: bold;
             padding-bottom: 1rem;
+            color: $unifg-cinza;
         }
 
         input {
             width: 300px;
             height: 30px;
             padding-left: 0.3rem;
+            margin-bottom: 0.2rem;
             border-radius: 10px;
             border: 0;
+        }
+
+        input::placeholder {
+            color: $stand-gray;
+            opacity: 35%;
         }
 
         textarea {
@@ -45,7 +62,7 @@
 
     button {
         background-color: #212121;
-        color: aliceblue;
+        color: $unifg-branco;
         width: 150px;
         height: 40px;
         border: 1px solid rgba(0, 0, 0, 0.534) !important;
@@ -56,13 +73,29 @@
     }
 
     .confirmBtn {
-        margin: 1rem auto;
+        button {
+            margin: 1rem auto;
+            background-color: $unifg-laranja;
+            border: 0 !important;
+        }
+
+        button:hover {
+            background-color: $unifg-azul;
+            transition: 0.5s;
+        }
     }
 
     .closeBtn {
         margin-left: 90%;
         button {
             width: 50px;
+            background-color: $unifg-laranja;
+            border: 0 !important;
+        }
+
+        button:hover {
+            background-color: $unifg-azul;
+            transition: 0.5s;
         }
     }
 }
@@ -70,6 +103,33 @@
 @media only screen and (max-width: 500px) {
 
     .Modal{
+        width: 550px !important;
+        padding: 2rem !important;
+        
+        .closeBtn {
+            margin-left: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    .Modal {
+        width: 500px !important;
+        padding: 1rem !important;
+
+        .closeBtn {
+            margin-left: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .Modal {
+        width: 300px !important;
+        padding: .3rem !important;
+
         .closeBtn {
             margin-left: 50%;
         }
