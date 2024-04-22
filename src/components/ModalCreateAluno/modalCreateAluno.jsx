@@ -27,46 +27,35 @@ const ModalCreateAluno = () => {
     };
 
     return (
-        <>
-            <ReactModal
-                isOpen={createAlunoModal}
-                onRequestClose={() => closeCreateAlunoModal()}
-                className="Modal"
-                overlayClassName="exterior-modal"
-            >
-                <div className="btnClose">
-                    <h1>Adiconar Aluno</h1>
-                    <button onClick={() => closeCreateAlunoModal()}>X</button>
-                </div>
-                <form onSubmit={handleSubmit(onSubmitCreateAlunoModal)}>
-                    <label>Nome</label>
-                    <input
-                        type="text"
-                        placeholder="McLovin"
-                        {...register("nome")}
-                    />
-                    <p>{errors.nome?.message}</p>
+      <>
+        <ReactModal
+          isOpen={createAlunoModal}
+          onRequestClose={() => closeCreateAlunoModal()}
+          className="Modal"
+          overlayClassName="exterior-modal">
+          <div className="closeBtn">
+            <button onClick={() => closeCreateAlunoModal()}>X</button>
+          </div>
+          <div>
+            <h1>Adicionar Aluno</h1>
+          </div>
+          <form onSubmit={handleSubmit(onSubmitCreateAlunoModal)}>
+            <label>Nome</label>
+            <input type="text" placeholder="Treloso" {...register("nome")} />
+            <p>{errors.nome?.message}</p>
 
-                    <label>Curso</label>
-                    <input
-                        type="text"
-                        placeholder="ADS"
-                        {...register("curso")}
-                    />
-                    <p>{errors.curso?.message}</p>
+            <label>Curso</label>
+            <input type="text" placeholder="ADS" {...register("curso")} />
+            <p>{errors.curso?.message}</p>
 
-                    <label>RA</label>
-                    <input
-                        type="number"
-                        placeholder="0123456789"
-                        {...register("RA")}
-                    />
-                    <p>{errors.RA?.message}</p>
+            <label>RA</label>
+            <input maxLength="10" type="text" placeholder="0123456789" {...register("RA")} />
+            <p>{errors.RA?.message}</p>
 
-                    <button type="submit">Adiconar Aluno</button>
-                </form>
-            </ReactModal>
-        </>
+            <button className="confirmBtn" type="submit">Adicionar Aluno</button>
+          </form>
+        </ReactModal>
+      </>
     );
 };
 
