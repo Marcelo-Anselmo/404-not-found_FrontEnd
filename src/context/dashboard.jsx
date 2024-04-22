@@ -216,6 +216,32 @@ export const DashboardProvider = ({ children }) => {
             );
     }
 
+    async function sendEmail(profId) {
+        const loading = toast.loading("Por favor aguarde...", {
+            position: "top-center",
+            theme: "dark",
+        });
+        await Api.get(`/send_email/${profId}/`)
+            .then((res) => {
+                toast.update(loading, {
+                    render: "Email Enviado!",
+                    type: "success",
+                    isLoading: false,
+                    autoClose: 1000,
+                });
+            })
+            .catch(
+                (err) => (
+                    console.log(err),
+                    toast.error("Falha ao adicionar Aluno!", {
+                        position: "top-center",
+                        autoClose: 2000,
+                        theme: "dark",
+                    })
+                )
+            );
+    }
+
     return (
         <DashboardContext.Provider
             value={{
@@ -254,6 +280,7 @@ export const DashboardProvider = ({ children }) => {
                 idAluno,
                 getAlunoId,
                 deleteAluno,
+                sendEmail,
             }}
         >
             {children}
