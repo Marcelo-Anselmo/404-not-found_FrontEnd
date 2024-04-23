@@ -11,6 +11,7 @@ export const DashboardProvider = ({ children }) => {
     const [createAlunoModal, setCreateAlunoModal] = useState(false);
     const [editeAlunoModal, setEditeAlunoModal] = useState(false);
     const [deleteAlunoModal, setDeleteAlunoModal] = useState(false);
+    const [qrCodeModal, setQrCodeModal] = useState(false);
     const [ataOnline, setAtaOnline] = useState([]);
     const [idAluno, setIdAluno] = useState("");
 
@@ -62,12 +63,19 @@ export const DashboardProvider = ({ children }) => {
         setDeleteAlunoModal(false);
     };
 
+    const openQrCodeModal = () => {
+        setQrCodeModal(true);
+    };
+    const closeQrCodeModal = () => {
+        setQrCodeModal(false);
+    };
+
     async function createAta(data) {
         await Api.post("/professor/", data)
             .then((res) => {
                 toast.success("Ata criada com sucesso!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 getAtaID(res.data.id);
@@ -103,9 +111,9 @@ export const DashboardProvider = ({ children }) => {
     async function createAluno(data, profId) {
         await Api.post(`/aluno/${profId}/`, data)
             .then((res) => {
-                toast.success("Aluno adicionado com sucesso!", {
+                toast.success("Aluno registrado com sucesso!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 getAtaID(profId);
@@ -114,7 +122,7 @@ export const DashboardProvider = ({ children }) => {
             .catch(
                 (err) => (
                     console.log(err),
-                    toast.error("Falha ao adicionar Aluno!", {
+                    toast.error("Falha ao registrar Aluno!", {
                         position: "top-center",
                         autoClose: 2000,
                         theme: "dark",
@@ -128,7 +136,7 @@ export const DashboardProvider = ({ children }) => {
             .then((res) => {
                 toast.success("Ata atualizada!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 getAtaID(profId);
@@ -151,7 +159,7 @@ export const DashboardProvider = ({ children }) => {
             .then((res) => {
                 toast.success("Ata deletada!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 localStorage.removeItem("ataId");
@@ -175,7 +183,7 @@ export const DashboardProvider = ({ children }) => {
             .then((res) => {
                 toast.success("Aluno atualizado!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 getAtaID(profId);
@@ -198,7 +206,7 @@ export const DashboardProvider = ({ children }) => {
             .then((res) => {
                 toast.success("Aluno deletado!", {
                     position: "top-center",
-                    autoClose: 1000,
+                    autoClose: 2000,
                     theme: "colored",
                 });
                 getAtaID(profId);
@@ -227,13 +235,13 @@ export const DashboardProvider = ({ children }) => {
                     render: "Email Enviado!",
                     type: "success",
                     isLoading: false,
-                    autoClose: 1000,
+                    autoClose: 2000,
                 });
             })
             .catch(
                 (err) => (
                     console.log(err),
-                    toast.error("Falha ao adicionar Aluno!", {
+                    toast.error("Falha ao enviar email!", {
                         position: "top-center",
                         autoClose: 2000,
                         theme: "dark",
@@ -281,6 +289,10 @@ export const DashboardProvider = ({ children }) => {
                 getAlunoId,
                 deleteAluno,
                 sendEmail,
+                qrCodeModal,
+                setQrCodeModal,
+                openQrCodeModal,
+                closeQrCodeModal,
             }}
         >
             {children}

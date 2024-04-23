@@ -35,6 +35,11 @@
 
     color: #212121;
 }
+
+.qrCodeBtn:hover {
+    transition: 0.3s;
+    color: #00428b;
+}
 .createBtn:hover {
     transition: 0.3s;
     color: #00428b;
