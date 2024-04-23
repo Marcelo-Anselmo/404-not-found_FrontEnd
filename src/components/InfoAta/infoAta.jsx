@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./infoAta.modules.css";
 import { FaPen, FaTrashAlt, FaAddressCard } from "react-icons/fa";
+import { BsQrCode } from "react-icons/bs";
 import { DashboardContext } from "../../context/dashboard";
 import ButtonSendEmail from "../ButtonSendEmail/buttonSendEmail";
 
@@ -10,6 +11,7 @@ const InfoAta = () => {
         openCreateAlunoModal,
         openEditeAtaModal,
         openDeleteAtaModal,
+        openQrCodeModal,
     } = useContext(DashboardContext);
 
     return (
@@ -18,6 +20,10 @@ const InfoAta = () => {
                 <div className="containerTitle">
                     <h2>Lista de presença online</h2>
                     <div className="containerBtns">
+                        <BsQrCode
+                            className="qrCodeBtn"
+                            onClick={() => openQrCodeModal()}
+                        />
                         <FaAddressCard
                             className="createBtn"
                             onClick={() => openCreateAlunoModal()}

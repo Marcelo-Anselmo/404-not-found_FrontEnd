@@ -6,7 +6,7 @@
 }
 
 .sendEmail {
-    background-color: #00428b;
+    background-color: #e87722;
     color: #f0f0f0;
 
     padding: 8px;
@@ -23,8 +23,8 @@
 
 .sendEmail:hover {
     transition: 0.3s;
-    background-color: #e87722;
-    color: #00428b;
+    background-color: #00428b;
+    color: #f0f0f0;
 }
 
 @media (min-width: 1020px) {
