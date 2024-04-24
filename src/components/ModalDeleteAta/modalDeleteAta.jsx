@@ -14,8 +14,8 @@ const DeleteAtaModal = () => {
         className="Modal"
         overlayClassName="exterior-modal">
         <div className="Btns">
-          <h1>Deseja excluir está Ata?</h1>
-          <div>
+          <h1>Deseja excluir está lista?</h1>
+        <div>
             <button className="confirmBtn" onClick={() => deleteAta(ataOnline.id)}>Confirmar</button>
             <button className="cancelBtn" onClick={() => closeDeleteAtaModal()}>Cancelar</button>
           </div>
