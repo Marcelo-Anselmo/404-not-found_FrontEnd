@@ -1,0 +1,63 @@
+.divContainer {
+    width: 100%;
+
+    margin-bottom: -12rem;
+}
+
+.divTitle {
+    color: #e87722;
+
+    text-align: center;
+}
+
+.containerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 1.5rem;
+
+    gap: 1rem;
+}
+.containerForm label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.containerForm input {
+    width: 250px;
+    height: 45px;
+    padding-left: 0.8rem;
+    margin-bottom: 0.2rem;
+    border-radius: 10px;
+    border: 0;
+
+    background-color: #f0f0f0;
+
+    font-size: larger;
+
+    border: solid 1px black;
+}
+
+.btnCreate {
+    margin-top: 0.7rem;
+
+    background-color: #00428b;
+    color: #f0f0f0;
+
+    width: 150px;
+    height: 40px;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.btnCreate:hover {
+    transition: 0.2s;
+    background-color: #e87722;
+}

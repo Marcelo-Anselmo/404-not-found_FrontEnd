@@ -23,7 +23,6 @@ const ModalEditeAluno = () => {
     } = useForm({ resolver: yupResolver(ModalSchema) });
 
     const onSubmitEditeAlunoModal = (data) => {
-        console.log(data);
         editeAluno(data, ataOnline.id);
     };
 
@@ -63,11 +62,14 @@ const ModalEditeAluno = () => {
                         maxLength="10"
                         type="text"
                         placeholder="0123456789"
+                        minLength="10"
                         {...register("RA")}
                     />
                     <p>{errors.RA?.message}</p>
 
-                    <button className="confirmBtn" type="submit">Editar Aluno</button>
+                    <button className="confirmBtn" type="submit">
+                        Editar Aluno
+                    </button>
                 </form>
             </ReactModal>
         </>

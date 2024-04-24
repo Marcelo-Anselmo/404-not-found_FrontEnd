@@ -17,7 +17,7 @@
     border-radius: 15px;
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
 
-    h1{
+    h1 {
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 3rem;
@@ -77,11 +77,12 @@
             margin: 1rem auto;
             background-color: $unifg-laranja;
             border: 0 !important;
+            border-radius: 10px;
         }
 
         button:hover {
             background-color: $unifg-azul;
-            transition: 0.5s;
+            transition: 0.3s;
         }
     }
 
@@ -101,11 +102,10 @@
 }
 
 @media only screen and (max-width: 500px) {
-
-    .Modal{
+    .Modal {
         width: 550px !important;
         padding: 2rem !important;
-        
+
         .closeBtn {
             margin-left: 50%;
         }
@@ -113,7 +113,6 @@
 }
 
 @media only screen and (max-width: 360px) {
-
     .Modal {
         width: 500px !important;
         padding: 1rem !important;
@@ -125,10 +124,9 @@
 }
 
 @media only screen and (max-width: 320px) {
-
     .Modal {
         width: 300px !important;
-        padding: .3rem !important;
+        padding: 0.3rem !important;
 
         .closeBtn {
             margin-left: 50%;

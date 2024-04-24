@@ -12,6 +12,7 @@ import ModalEditeAluno from "../components/ModalEditeAluno/modalEditeAluno";
 import DeleteAlunoModal from "../components/ModalDeleteAluno/modalDeleteAluno";
 import InfoAta from "../components/InfoAta/infoAta";
 import CardAlunos from "../components/CardAlunos/cardAlunos";
+import ModalQrCode from "../components/ModalQrCode/modalQrCode";
 
 ReactModal.setAppElement("#root");
 
@@ -52,6 +53,7 @@ export const DashboardPage = () => {
             <ModalCreateAluno />
             <ModalEditeAluno />
             <DeleteAlunoModal />
+            <ModalQrCode />
             <Members />
         </div>
     );
