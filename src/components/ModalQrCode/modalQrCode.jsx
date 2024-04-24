@@ -5,7 +5,7 @@ import QRCode from "react-qr-code";
 import { DashboardContext } from "../../context/dashboard";
 
 const ModalQrCode = () => {
-    const { qrCodeModal, openQrCodeModal, closeQrCodeModal } =
+    const { qrCodeModal, closeQrCodeModal, ataOnline } =
         useContext(DashboardContext);
 
     return (
