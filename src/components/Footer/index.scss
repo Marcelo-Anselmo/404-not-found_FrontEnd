@@ -48,3 +48,21 @@
         }
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .memberSection {
+        padding-top: 2rem;
+        ul {
+            display: flex;
+
+            li {
+                font-size: .9rem;
+            }
+        }
+    }
+}

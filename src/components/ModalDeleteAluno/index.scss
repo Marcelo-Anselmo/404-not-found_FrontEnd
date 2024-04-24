@@ -51,7 +51,7 @@
 
     .closeBtn {
         margin-left: 90%;
-
+        
         button {
             width: 50px;
         }
@@ -68,6 +68,19 @@
     .Modal {
         .closeBtn {
             margin-left: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .Modal {
+        .cancelBtn {
+            width: 100px;
+        }
+
+        .confirmBtn {
+            width: 100px;
         }
     }
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const Api = axios.create({
-    baseURL: "http://127.0.0.1:8000/api",
-    timeout: 10000,
+    baseURL: "https://autentica-ulife.onrender.com/api",
+    timeout: 5000,
 });

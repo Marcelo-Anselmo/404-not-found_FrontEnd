@@ -40,8 +40,8 @@ const ModalEditeAta = () => {
                 <div className="closeBtn">
                     <button onClick={() => closeEditeAtaModal()}>X</button>
                 </div>
-                <div>
-                    <h1>Editar Ata</h1>
+                <div className="editText">
+                    <h1>Editar lista de presença</h1>
                 </div>
                 <form onSubmit={handleSubmit(onSubmitEditeAtaModal)}>
                     <label>Professor</label>
@@ -92,7 +92,7 @@ const ModalEditeAta = () => {
                     />
                     <p>{errors.descricao?.message}</p>
 
-                    <button className="confirmBtn" type="submit">Editar Ata</button>
+                    <button className="confirmBtn" type="submit">Editar lista</button>
                 </form>
             </ReactModal>
         </>
