@@ -12,8 +12,7 @@ const StudentSchema = yup.object({
 });
 
 const FormStudent = ({ id }) => {
-    console.log("cheguei no form: ", id);
-    const { createAluno, ataOnline } = useContext(DashboardContext);
+    const { createAluno } = useContext(DashboardContext);
 
     const {
         register,
@@ -22,7 +21,7 @@ const FormStudent = ({ id }) => {
     } = useForm({ resolver: yupResolver(StudentSchema) });
 
     const onSubmitCreateAluno = (data) => {
-        createAluno(data, ataOnline.id);
+        createAluno(data, id);
     };
 
     return (
