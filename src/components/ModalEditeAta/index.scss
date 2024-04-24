@@ -21,6 +21,11 @@
         font-weight: 700;
     }
 
+    .editText {
+        padding: 0px;
+        margin: 0px;
+    }
+
     form {
         display: flex;
         flex-direction: column;
@@ -100,6 +105,24 @@
     .Modal {
         .closeBtn {
             margin-left: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .Modal {
+        width: 100px;
+
+        h1 {
+            font-size: 1.5rem !important;
+            text-align: center;
+        }
+
+
+
+        .closeBtn {
+            margin-left: 20%;
         }
     }
 }
