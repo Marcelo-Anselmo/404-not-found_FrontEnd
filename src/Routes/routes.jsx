@@ -6,9 +6,7 @@ export const Rotas = () => {
     return (
         <Routes>
             <Route path="/" element={<DashboardPage />} />
-            <Route path="/student">
-                <Route path=":id" element={<StudentRegister />} />
-            </Route>
+            <Route path="/student/:id" element={<StudentRegister />} />
         </Routes>
     );
 };
