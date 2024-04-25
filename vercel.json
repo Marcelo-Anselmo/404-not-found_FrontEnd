@@ -18,6 +18,6 @@
     ],
 
     "routes": [
-        { "src": "/student/(?<id>[^/]+)", "dest": "/api/product?id=$id" }
+        { "src": "/student/(?<id>[^/]+)", "dest": "/api/student?id=$id" }
     ]
 }
