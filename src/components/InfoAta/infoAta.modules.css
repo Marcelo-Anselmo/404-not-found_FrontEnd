@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    width: 80%;
+
+    border-radius: 15px;
+
+    background-color: #f0f0f0;
+    color: rgb(99, 100, 102);
+
+    padding-bottom: 1rem;
+}
+.containerTitle {
+    margin: 10px 0px 10px 0px;
+    margin-left: 2.3rem;
+
+    color: #e87722;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.containerBtns {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+
+    margin-top: 11px;
+
+    color: #212121;
+}
+
+.qrCodeBtn:hover {
+    transition: 0.3s;
+    color: #00428b;
+}
+.createBtn:hover {
+    transition: 0.3s;
+    color: #00428b;
+}
+.editeBtn:hover {
+    transition: 0.3s;
+    color: #00428b !important;
+}
+.deleteBtn:hover {
+    transition: 0.3s;
+    color: #00428b !important;
+}
+
+.containerInfo {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding-bottom: 10px;
+
+    margin-left: -80px;
+}
+
+.texto {
+    font-weight: 450;
+    word-wrap: break-word;
+
+    margin-left: 80px;
+}
+
+@media (min-width: 1020px) {
+    .containerInfo {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 89%;
+    }
+
+    .containerBtns {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .container {
+        width: 93%;
+    }
+
+    .containerBtns {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 98%;
+    }
+
+    .texto {
+        margin-left: 4rem;
+    }
+
+    .containerTitle {
+        margin-left: 1.3rem;
+        gap: 30px;
+    }
+
+    .Btns {
+        width: 100%;
+    }
+
+    .containerBtns {
+        width: 90%;
+    }
+}

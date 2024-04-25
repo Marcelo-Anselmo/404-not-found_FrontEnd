@@ -1,0 +1,124 @@
+@use "../../sass/variables" as *;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    color: $unifg-cinza;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: $unifg-laranja;
+    transition: 0.3s;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0rem 4rem 0rem 0rem;
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 5rem;
+        }
+
+        li {
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: $unifg-cinza;
+            transition: 0.5s;
+            border-bottom: 2px solid $unifg-laranja;
+        }
+    }
+
+    img {
+        width: 300px;
+        margin: 0;
+        padding: 5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    header {
+
+        img {
+            width: 230px;
+            padding: 3rem;
+        }
+        
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    header {
+
+        img {
+            width: 190px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    header {
+
+        img {
+            width: 190px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    header {
+
+        img {
+            width: 165px;
+            padding: 3rem;
+        }
+
+        nav {
+
+            ul {
+                gap: 1.3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.containerCard {
+    margin: 15px auto;
+
+    border-radius: 15px;
+}
+.title {
+    text-align: center;
+    visibility: hidden;
+}
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10px;
+    width: 100%;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+    background-color: #f0f0f0;
+    color: #212121;
+
+    border-radius: 10px;
+
+    padding: 5px 0px 4px 10px;
+
+    margin-left: 1.6rem;
+
+    font-weight: 400;
+}
+
+.containerBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 8px 10px 0px 0px;
+
+    color: #212121;
+
+    cursor: pointer;
+}
+
+.containerBtns {
+    cursor: pointer;
+}
+
+.editeBtn:hover {
+    transition: 0.3s;
+    color: #157f18;
+}
+.deleteBtn:hover {
+    transition: 0.3s;
+    color: #157f18;
+}
