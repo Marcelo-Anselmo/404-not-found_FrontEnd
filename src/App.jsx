@@ -1,9 +1,9 @@
 import "./App.css";
 import ReactModal from "react-modal";
-import { Rotas } from "./Routes/routes.jsx";
 import { DashboardProvider } from "./context/dashboard.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Rotas } from "./Routes/routes.jsx";
 
 ReactModal.setAppElement("#root");
 
