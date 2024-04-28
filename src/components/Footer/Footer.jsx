@@ -7,10 +7,10 @@ const Footer = () => {
         <div id="aboutSection" className="aboutSection">
           <h2>Sobre</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Distinctio, <br /> labore! Aperiam culpa saepe eos possimus dolorum
-            labore assumenda, <br /> repudiandae aliquam perferendis nulla
-            impedit porro autem, <br /> magnam et officia quod id!
+            Site de Lista de Presença Online <br />
+            que vem para ajudar a melhorar a eficiência, <br />
+            organização e acompanhamento de frequencia <br />
+            dos alunos da Instituição.
           </p>
         </div>
         <div id="memberSection" className="memberSection">
