@@ -33,6 +33,30 @@
         font-size: 1rem;
         font-weight: 500;
     }
+
+    .imgSec {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        #logo404 {
+                width: 200px;
+                height: 170px;
+            }
+        
+            #logoAnima {
+                width: 130px;
+                height: 100px;
+            }
+        
+            #logoUNIFG {
+                width: 200px;
+                height: 40px;
+            }
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -46,6 +70,30 @@
         ul {
             display: flex;
         }
+
+                .imgSec {
+        
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+        
+                    #logo404 {
+                        width: 200px;
+                        height: 170px;
+                    }
+        
+                    #logoAnima {
+                        width: 130px;
+                        height: 100px;
+                    }
+        
+                    #logoUNIFG {
+                        width: 200px;
+                        height: 40px;
+                    }
+                }
     }
 }
 
@@ -64,5 +112,29 @@
                 font-size: .9rem;
             }
         }
+
+                .imgSec {
+        
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+        
+                    #logo404 {
+                        width: 200px;
+                        height: 170px;
+                    }
+        
+                    #logoAnima {
+                        width: 130px;
+                        height: 100px;
+                    }
+        
+                    #logoUNIFG {
+                        width: 200px;
+                        height: 40px;
+                    }
+                }
     }
 }

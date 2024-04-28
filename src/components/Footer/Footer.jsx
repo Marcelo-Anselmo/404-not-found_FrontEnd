@@ -25,6 +25,23 @@ const Footer = () => {
               <li>Marcos</li>
               <li>Helenna</li>
             </ul>
+            <div className="imgSec">
+              <img
+                id="logo404"
+                src="public/404_logo_alpha.png"
+                alt="logo do equipe 404"
+              />
+              <img
+                id="logoAnima"
+                src="public/anima_logo.png"
+                alt="logo da ANIMA"
+              />
+              <img
+                id="logoUNIFG"
+                src="public/unifg_logo.png"
+                alt="logo da UNIFG"
+              />
+            </div>
           </div>
         </div>
       </section>
