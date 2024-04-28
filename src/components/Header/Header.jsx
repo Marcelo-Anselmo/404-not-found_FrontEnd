@@ -1,5 +1,5 @@
 import "./index.scss";
-import unifgLogo from "../../../public/unifg_logo.png";
+import unifgLogo from "../../../public/unifg_logo_azul.png";
 
 const Header = () => {
     return (
