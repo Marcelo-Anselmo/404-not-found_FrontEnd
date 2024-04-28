@@ -40,6 +40,12 @@
     border: solid 1px black;
 }
 
+.containerForm p {
+    color: red;
+    font-size: larger;
+    font-weight: 600;
+}
+
 .btnCreate {
     margin-top: 0.7rem;
 

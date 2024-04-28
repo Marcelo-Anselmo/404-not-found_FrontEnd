@@ -16,7 +16,10 @@ const ModalQrCode = () => {
                 className="modal"
                 overlayClassName="exterior-modal"
             >
-                <QRCode className="containerQrCode" value="www.google.com" />
+                <QRCode
+                    className="containerQrCode"
+                    value={`https://404-not-found-front-end.vercel.app/student/${ataOnline.id}`}
+                />
             </ReactModal>
         </>
     );
