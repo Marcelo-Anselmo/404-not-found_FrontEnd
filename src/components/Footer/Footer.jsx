@@ -1,4 +1,7 @@
 import "./index.scss";
+import unifgLogo from "../../../public/unifg_logo.png";
+import Logo_404 from "../../../public/404_logo_alpha.png";
+import animaLogo from "../../../public/anima_logo.png";
 
 const Footer = () => {
   return (
@@ -26,21 +29,9 @@ const Footer = () => {
               <li>Helenna</li>
             </ul>
             <div className="imgSec">
-              <img
-                id="logo404"
-                src="public/404_logo_alpha.png"
-                alt="logo do equipe 404"
-              />
-              <img
-                id="logoAnima"
-                src="public/anima_logo.png"
-                alt="logo da ANIMA"
-              />
-              <img
-                id="logoUNIFG"
-                src="public/unifg_logo.png"
-                alt="logo da UNIFG"
-              />
+              <img id="logo404" src={Logo_404} alt="logo do equipe 404" />
+              <img id="logoAnima" src={animaLogo} alt="logo da ANIMA" />
+              <img id="logoUNIFG" src={unifgLogo} alt="logo da UNIFG" />
             </div>
           </div>
         </div>
