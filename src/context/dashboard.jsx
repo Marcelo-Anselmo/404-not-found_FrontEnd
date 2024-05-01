@@ -113,7 +113,7 @@ export const DashboardProvider = ({ children }) => {
             .then((res) => {
                 toast.success("Aluno registrado com sucesso!", {
                     position: "top-center",
-                    autoClose: 2000,
+                    autoClose: 3000,
                     theme: "colored",
                 });
                 getAtaID(profId);
@@ -122,9 +122,9 @@ export const DashboardProvider = ({ children }) => {
             .catch(
                 (err) => (
                     console.log(err),
-                    toast.error("Falha ao registrar Aluno!", {
+                    toast.error(`${err.response.data.detail}`, {
                         position: "top-center",
-                        autoClose: 2000,
+                        autoClose: 3000,
                         theme: "dark",
                     })
                 )

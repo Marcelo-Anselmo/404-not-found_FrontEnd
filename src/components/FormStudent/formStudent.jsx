@@ -8,7 +8,11 @@ import { useContext } from "react";
 const StudentSchema = yup.object({
     nome: yup.string().required("Nome e sobrenome").min(8, "Nome e sobrenome"),
     curso: yup.string().required().min(2, "Sigla do curso"),
-    RA: yup.number().required().min(10, "RA contem 10 números"),
+    RA: yup
+        .string()
+        .required()
+        .min(10, "RA contém no mínimo 10 números")
+        .max(11, "RA contém no máximo 11 números"),
 });
 
 const FormStudent = ({ id }) => {
@@ -47,7 +51,7 @@ const FormStudent = ({ id }) => {
 
                 <label>RA</label>
                 <input
-                    maxLength="10"
+                    maxLength="11"
                     type="text"
                     placeholder="0123456789"
                     {...register("RA")}
