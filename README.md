@@ -39,7 +39,7 @@ Tiveram muitos desafios tecnicos, principalmente em relação ao `DEPLOY`, foi e
 
 
 ## 🧑🏽‍💻 Dev-Team
-Flávia-Alessandra[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Marcelo-Anselmo)
+Flávia-Alessandra[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FlaviaaAlessandra)
 
 Flávia-Alessandra[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marcelo-anselmo-41587b280/)
 
